@@ -1,0 +1,38 @@
+<!-- Example 1: Basic Grid Layout -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Grid Layout Example 1</title>
+<style>
+    /* Basic Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+    gap: 10px; /* Space between items */
+}
+
+/* Grid Item Styles */
+.grid-item {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 20px; /* Padding around text */
+    text-align: center; /* Centered text */
+    border: 1px solid #ddd; /* Light grey border */
+}
+
+</style>
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+    </div>
+</body>
+</html>
