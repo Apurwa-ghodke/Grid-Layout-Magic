@@ -1,0 +1,74 @@
+/* Grid Properties Container */
+.grid-properties-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    gap: 15px; /* Space between items */
+    padding: 20px; /* Padding around the grid */
+}
+
+/* Individual Grid Items */
+.grid-item {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 20px; /* Padding around text */
+    text-align: center; /* Centered text */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Example of each property usage */
+.grid-template-columns {
+    grid-column: 1 / span 1; /* First column */
+}
+
+.grid-template-rows {
+    grid-column: 2 / span 1; /* Second column */
+}
+
+.grid-template-areas {
+    grid-column: 3 / span 1; /* Third column */
+}
+
+.grid-gap {
+    grid-column: 1 / span 1; /* First column */
+}
+
+.grid-column {
+    grid-column: 2 / span 1; /* Second column */
+}
+
+.grid-row {
+    grid-column: 3 / span 1; /* Third column */
+}
+
+.grid-area {
+    grid-column: 1 / span 1; /* First column */
+}
+
+.grid-auto-columns {
+    grid-column: 2 / span 1; /* Second column */
+}
+
+.grid-auto-rows {
+    grid-column: 3 / span 1; /* Third column */
+}
+
+.grid-auto-flow {
+    grid-column: 1 / span 1; /* First column */
+}
+
+.grid-column-start {
+    grid-column: 2 / span 1; /* Second column */
+}
+
+.grid-column-end {
+    grid-column: 3 / span 1; /* Third column */
+}
+
+.grid-row-start {
+    grid-column: 1 / span 1; /* First column */
+}
+
+.grid-row-end {
+    grid-column: 2 / span 1; /* Second column */
+}
