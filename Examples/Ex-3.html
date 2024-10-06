@@ -3,18 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <link rel="stylesheet" href="styles.css">
-=======
-    <link rel="stylesheet" href="../styles/styles.css">
->>>>>>> parent of 36ab57f (My local changes)
-    <title>Grid Layout Example 3</title>
-=======
-=======
->>>>>>> origin/main
     <title>Dashboard Layout</title>
+    <link rel="stylesheet" href="dashboard.css">
 <style>
     /* dashboard.css */
 body {
@@ -76,7 +66,7 @@ body {
     text-align: center;
 }
 
-</style>
+    </style>
 </head>
 <body>
     <div class="grid-container">
@@ -90,6 +80,35 @@ body {
         </main>
         <aside class="aside">Notifications</aside>
         <footer class="footer">Footer</footer>
+    </div>
+</body>
+</html>
+
+<!-- Example 3: Responsive Grid -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Grid Layout Example 3</title>
+<style>
+    /* Responsive Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 10px; /* Space between items */
+}
+
+</style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
     </div>
 </body>
 </html>
