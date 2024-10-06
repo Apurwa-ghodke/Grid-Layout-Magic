@@ -1,28 +1,85 @@
-<!-- Example 3: Responsive Grid -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <title>Grid Layout Example 3</title>
+    <title>Dashboard Layout</title>
+    <link rel="stylesheet" href="dashboard.css">
 <style>
-    /* Responsive Grid Layout */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
-    gap: 10px; /* Space between items */
+    /* dashboard.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-</style>
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr 200px;
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #673AB7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #e1bee7;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #673AB7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+    </style>
 </head>
 <body>
     <div class="grid-container">
-        <div class="grid-item">Item 1</div>
-        <div class="grid-item">Item 2</div>
-        <div class="grid-item">Item 3</div>
-        <div class="grid-item">Item 4</div>
-        <div class="grid-item">Item 5</div>
+        <header class="header">Dashboard</header>
+        <nav class="nav">Menu</nav>
+        <main class="main">
+            <section class="card">Card 1</section>
+            <section class="card">Card 2</section>
+            <section class="card">Card 3</section>
+            <section class="card">Card 4</section>
+        </main>
+        <aside class="aside">Notifications</aside>
+        <footer class="footer">Footer</footer>
     </div>
 </body>
 </html>
