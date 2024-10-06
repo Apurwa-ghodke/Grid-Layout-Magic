@@ -1,29 +1,88 @@
-<!-- Example 2: Grid with Different Column Sizes -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <title>Grid Layout Example 2</title>
-<style>
-    /* Grid with different column sizes */
-.grid-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* First column twice as wide */
-    gap: 15px; /* Space between items */
+    <title>E-commerce Layout</title>
+    <link rel="stylesheet" href="ecommerce.css">
+    <style>
+        /* ecommerce.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-</style>
-</head>
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr 200px;
+    height: 100vh;
+}
 
+.header {
+    grid-area: header;
+    background-color: #2196F3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.product {
+    background-color: #e0f7fa;
+    border: 1px solid #b2ebf2;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #2196F3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+    </style>
+</head>
 <body>
     <div class="grid-container">
-        <div class="grid-item">Item 1</div>
-        <div class="grid-item">Item 2</div>
-        <div class="grid-item">Item 3</div>
-        <div class="grid-item">Item 4</div>
-        <div class="grid-item">Item 5</div>
+        <header class="header">Shop</header>
+        <nav class="nav">Filters</nav>
+        <main class="main">
+            <div class="product">Product 1</div>
+            <div class="product">Product 2</div>
+            <div class="product">Product 3</div>
+            <div class="product">Product 4</div>
+            <div class="product">Product 5</div>
+            <div class="product">Product 6</div>
+        </main>
+        <aside class="aside">Cart</aside>
+        <footer class="footer">Footer</footer>
     </div>
 </body>
 </html>
